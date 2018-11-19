@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cvContacto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    >
+    <!--card_view:cardCornerRadius="@dimen/corner_radius_cardview"-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="7dp">
+
+
+        <ImageView
+            android:id="@+id/imgFoto"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/img_20140816_wa0000" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/btnLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icons8_thumbs_up_50"
+                android:layout_alignParentLeft="true"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/tvNombreCV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pnombre"
+                android:textSize="@dimen/nombre_card_view"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTelefonoCV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ptelefono"
+                android:textSize="@dimen/nombre_card_view"
+                android:textStyle="bold" />
+
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvlikes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/plikes"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/nombre_card_view"/>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

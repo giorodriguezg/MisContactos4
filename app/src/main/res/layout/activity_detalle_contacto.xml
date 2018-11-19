@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="co.grgiral.miscontactos.DetalleContacto"
+
+    android:orientation="vertical">
+    <include
+        android:id="@+id/miActionBar"
+        layout="@layout/actionbar" />
+
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nombre"
+        android:textStyle="bold"
+        android:textSize="@dimen/nombre_contacto"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="llamar"
+        >
+
+    <ImageView
+        android:src="@drawable/call"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgvTelefono"/>
+
+    <TextView
+        android:id="@+id/tvTelefono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/telefono"
+        android:layout_gravity="center_vertical"
+        android:textSize="20sp"
+        android:layout_marginLeft="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="enviarMail"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="64dp">
+        <ImageView
+            android:src="@drawable/email"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgvEmail"/>
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        android:layout_gravity="center_vertical"
+        android:textSize="20sp"/>
+    </LinearLayout>
+
+</LinearLayout>
