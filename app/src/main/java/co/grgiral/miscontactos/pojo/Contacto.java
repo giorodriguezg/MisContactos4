@@ -21,6 +21,10 @@ public class Contacto {
         this.likes = likes;
     }
 
+    public Contacto() {
+
+    }
+
     public String getNombre() {
         return nombre;
     }

@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import co.grgiral.miscontactos.db.ConstructorContactos;
 import co.grgiral.miscontactos.pojo.Contacto;
 import co.grgiral.miscontactos.DetalleContacto;
 import co.grgiral.miscontactos.R;
@@ -34,7 +35,7 @@ public class ContactoAdaptador extends  RecyclerView.Adapter<ContactoAdaptador.C
     }
 
     @Override
-    public void onBindViewHolder(ContactoViewHolder holder, int position) {
+    public void onBindViewHolder(final ContactoViewHolder holder, int position) {
         final Contacto contacto= contactos.get(position);
         holder.imgFoto.setImageResource(contacto.getFoto());
         holder.tvNombreCV.setText(contacto.getNombre());
@@ -54,7 +55,9 @@ public class ContactoAdaptador extends  RecyclerView.Adapter<ContactoAdaptador.C
         holder.btnLike.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Toast.makeText(activity, "diste like a: "+contacto.getNombre(), Toast.LENGTH_SHORT).show();
-
+                ConstructorContactos  constructorContactos = new ConstructorContactos(activity);
+                constructorContactos.darLikeContacto(contacto);
+                holder.tvLikes.setText(String.valueOf(constructorContactos.obtenerLikesContacto(contacto))+" Likes");
             }
         });
     }
